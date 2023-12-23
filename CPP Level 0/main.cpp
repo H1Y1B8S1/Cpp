@@ -5,7 +5,7 @@ using namespace std;
 
 int main(int argc, char const *argv[])
 {
-    std ::cout << "jay Shree Ram....";
+    std ::cout << "jay Shree Ram bhaiyo....";
     getch();
     return 0;
 
