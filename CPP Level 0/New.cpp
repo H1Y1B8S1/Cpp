@@ -1,14 +1,20 @@
 #include <iostream>
 using namespace std;
 
-int main(int argc, char const *argv[])
+int main()
 {
-    char arr[] = " & Welcome to C++ Level 0";
-    int age;
+    int factorial();
 
-    cin >> age;
-    cout << "Value of age is:" << age << arr << ends;
+    factorial();
+    factorial();
+    factorial();
+}
 
+int factorial()
+{
+    static int i = 0;
+    int j = 0;
+    i++, j++;
 
-    return 0;
+    cout << i << " " << j << endl;
 }
