@@ -44,8 +44,39 @@ void MultiDimension()
     }
 }
 
+void AraayOfPointers()
+{
+
+    int arr1[5];  // array of int
+    int *arr2[5]; // array of pointers
+
+    // Adding int values into the arr1 also adding address value of arr1 items into pointer arr2.
+    for (int i = 0; i < 5; i++)
+    {
+        cout << "Enter int value for arr[" << i << "] : ";
+        cin >> arr1[i];
+
+        arr2[i] = &arr1[i]; //adding address of each elements of arr1 to arr2.
+    }
+
+    // accessing the value of arr2 which the address of items in arr1
+    cout << "Elements of arr2: ";
+    for (int i = 0; i < 5; i++)
+    {
+        cout << arr2[i] << ", ";
+    }
+
+    // accessing the value of arr1 with help of pointer arr2
+    cout << "\nElements of arr1: ";
+    for (int i = 0; i < 5; i++)
+    {
+        cout << *arr2[i] << ", ";
+    }
+}
+
 int main()
 {
-    SingleDimension();
-    MultiDimension();
+    // SingleDimension();
+    // MultiDimension();
+    AraayOfPointers();
 }

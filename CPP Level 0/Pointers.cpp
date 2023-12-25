@@ -26,7 +26,7 @@ void Boolens();
 void PointerExample()
 {
     int number = 30;
-    int *p;      // pointer initialization
+    int *p;      // pointer declaration
     p = &number; // stores the address of number variable
     cout << "Address of number variable is:" << &number << endl;
     cout << "Address of p variable is:" << p << endl;
