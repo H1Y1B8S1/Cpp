@@ -7,21 +7,29 @@ protected:
     int a;
 
 public:
-    void get_a(int n)
+    void set(int a)
     {
-        a = n;
+        this->a = a;
+    }
+    void display()
+    {
+        cout << "Class A" << endl;
     }
 };
 
 class B
 {
 protected:
-    int b;
+    int a;
 
 public:
-    void get_b(int n)
+    void set(int a)
     {
-        b = n;
+        this->a = a;
+    }
+    void display()
+    {
+        cout << "Class B" << endl;
     }
 };
 
@@ -30,18 +38,23 @@ class C : public A, public B
 public:
     void display()
     {
-        std::cout << "The value of a is : " << a << std::endl;
-        std::cout << "The value of b is : " << b << std::endl;
-        cout << "Addition of a and b is : " << a + b;
+        cout << "The value of ClassA::a is : " << A::a << endl;
+        cout << "The value of ClssB::a is : " << B::a << endl;
+        cout << "Addition of ClassA::a and ClssB::a is : " << A::a + B::a<<endl;
     }
 };
 
 int main()
 {
     C c;
-    c.get_a(10);
-    c.get_b(20);
+
+    c.A::set(10);
+    c.B::set(20);
+
     c.display();
+    
+    c.A::display();
+    c.B::display();
 
     return 0;
 }
