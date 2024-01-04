@@ -28,6 +28,10 @@ ipch/
 *.vsidx
 *.vcxproj
 *.filters
+*.opendb
+*.db-shm
+*.db-wal
+
 
 # Fortran module files
 *.mod
