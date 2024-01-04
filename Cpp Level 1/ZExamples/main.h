@@ -3,6 +3,11 @@
 
 #pragma once
 #include <iostream>
+#include <string>
+
+//----Person Class----//
+
+
 
 //----BankAccount Class----//
 class BankAccount
