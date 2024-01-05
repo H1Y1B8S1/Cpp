@@ -5,10 +5,6 @@
 #include <iostream>
 #include <string>
 
-//----Person Class----//
-
-
-
 //----BankAccount Class----//
 class BankAccount
 {
@@ -22,5 +18,6 @@ public:
     void withdraw(double amount);
     void displayBalance() const;
 };
+
 
 #endif // End of include guard
