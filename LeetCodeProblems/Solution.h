@@ -16,6 +16,9 @@ public:
 
 	//Q283
 	static void move_zeroes(std::vector<int>& nums);
+
+	//88 Merge Sorted Array
+	static void merge(std::vector<int>& nums1, int m, std::vector<int>& nums2, int n);
 };
 
 

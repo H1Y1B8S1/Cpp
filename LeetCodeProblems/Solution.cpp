@@ -1,6 +1,7 @@
 #include "Solution.h"
 #include <cmath>
 
+//66
 std::vector<int> solution::plus_one_66(std::vector<int>& digits)
 {
 	int n = digits.size();
@@ -31,7 +32,12 @@ std::vector<int> solution::plus_one_66(std::vector<int>& digits)
 	std::cout << "\n";
 	return digits;
 }
+//88
+void solution::merge(std::vector<int>& nums1, int m, std::vector<int>& nums2, int n)
+{
 
+}
+//263
 void solution::move_zeroes(std::vector<int>& nums)
 {
 	int countZeroes = 0;
