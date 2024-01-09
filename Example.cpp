@@ -1,69 +1,60 @@
-#include <iostream>
 #include <vector>
-#include <string>
-#include <algorithm>
-#include <type_traits>
+#include <iostream>
+#include <cmath>
 
-template <typename T>
-void vectorOperations(const std::vector<T> &vec)
+using namespace std;
+class Solution
 {
-    std::vector<T> tempVec = vec;
-    tempVec.erase(tempVec.begin() + 2);
-    tempVec.insert(tempVec.begin() + 1, T(99));
-    std::sort(tempVec.begin(), tempVec.end());
 
-    for (const T &elem : tempVec)
+public:
+    std::vector<int> plusOne(std::vector<int> &digits)
     {
-        std::cout << elem << " ";
+
+        double temp = 0;
+        double mul = pow(10, digits.size() - 1);
+
+        for (const int num : digits)
+        {
+            temp += num * mul;
+            mul = mul / 10;
+        }
+        temp++;
+        int number = temp;
+
+        int count = 0;
+        temp = static_cast<int>(temp);
+        while (temp != 0)
+        {
+            (temp) /= 10;
+            ++count;
+            temp = std::round(temp);
+            if (temp <= 1)
+                break;
+        }
+
+        double div = pow(10, count - 1);
+        std::vector<int> num;
+
+        for (int i = 0; i < count; i++)
+        {
+            num.push_back(std::round(number / div));
+            number = number - div * num[i];
+            div /= 10;
+        }
+
+        return num;
     }
-    std::cout << std::endl;
+};
 
-    std::cout << "Element at index 2: " << tempVec.at(2) << std::endl;
-    std::cout << "Size: " << tempVec.size() << std::endl;
-    std::cout << "Capacity: " << tempVec.capacity() << std::endl;
-}
-
-void vectorOperations(const std::vector<std::string> &vec)
+int main(int argc, char const *argv[])
 {
-    std::vector<std::string> tempVec = vec;
-    tempVec.erase(tempVec.begin() + 2);
-    tempVec.insert(tempVec.begin() + 1, "apple"); // Inserting a string instead of an integer
-    std::sort(tempVec.begin(), tempVec.end());
+    Solution solution;
+    vector<int> num = {8, 9, 9, 9};
+    num = solution.plusOne(num);
 
-    for (const std::string &elem : tempVec)
+    for (int n : num)
     {
-        std::cout << elem << " ";
+        cout << n << " ";
     }
-    std::cout << std::endl;
-
-    std::cout << "Element at index 2: " << tempVec.at(2) << std::endl;
-    std::cout << "Size: " << tempVec.size() << std::endl;
-    std::cout << "Capacity: " << tempVec.capacity() << std::endl;
-}
-
-int main()
-{
-    std::cout << "Select data type (1 for int, 2 for double, 3 for string): ";
-    int choice;
-    std::cin >> choice;
-
-    if (choice == 1)
-    {
-        vectorOperations(std::vector<int>{10, 20, 30, 40, 50});
-    }
-    else if (choice == 2)
-    {
-        vectorOperations(std::vector<double>{3.14, 2.71, 1.618, 0.123, 5.678});
-    }
-    else if (choice == 3)
-    {
-        vectorOperations(std::vector<std::string>{"apple", "banana", "orange", "grape", "kiwi"});
-    }
-    else
-    {
-        std::cout << "Invalid choice!" << std::endl;
-        return 1;
-    }
-
     return 0;
 }

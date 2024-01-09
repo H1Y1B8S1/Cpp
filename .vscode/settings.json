@@ -64,7 +64,9 @@
         "string": "cpp",
         "fstream": "cpp",
         "sstream": "cpp",
-        "list": "cpp"
+        "list": "cpp",
+        "optional": "cpp",
+        "variant": "cpp"
     },
     "editor.tokenColorCustomizations": {
         "textMateRules": [
