@@ -7,11 +7,15 @@
 #include <string>
 
 
+
 class solution
 {
 public:
 	//Q66 Plus One.
 	static std::vector<int> plus_one_66(std::vector<int>& digits);
+
+	//Q283
+	static void move_zeroes(std::vector<int>& nums);
 };
 
 
