@@ -10,46 +10,40 @@ public:
     std::vector<int> plusOne(std::vector<int> &digits)
     {
 
-        double temp = 0;
-        double mul = pow(10, digits.size() - 1);
+        std::vector<int> new_digits;
+        long long int temp = 0;
+        long long int mul = pow(10, digits.size() - 1);
 
-        for (const int num : digits)
+        for (int num : digits)
         {
             temp += num * mul;
-            mul = mul / 10;
+            mul /= 10;
         }
-        temp++;
-        int number = temp;
 
-        int count = 0;
-        temp = static_cast<int>(temp);
-        while (temp != 0)
+        // std::cout << temp << "\n";
+        long long int number = ++temp;
+        // std::cout << number << "\n";
+
+        while (number > 0)
         {
-            (temp) /= 10;
-            ++count;
-            temp = std::round(temp);
-            if (temp <= 1)
-                break;
+            new_digits.insert(new_digits.begin(), number % 10);
+            number /= 10;
         }
 
-        double div = pow(10, count - 1);
-        std::vector<int> num;
-
-        for (int i = 0; i < count; i++)
+        /*for(int num : new_digits)
         {
-            num.push_back(std::round(number / div));
-            number = number - div * num[i];
-            div /= 10;
-        }
+            std::cout << num<<"\n";
+        }*/
 
-        return num;
+        std::cout << "\n";
+        return new_digits;
     }
 };
 
 int main(int argc, char const *argv[])
 {
     Solution solution;
-    vector<int> num = {8, 9, 9, 9};
+    vector<int> num = {7,2,8,5,0,9,1,2,9,5,3,6,6,7,3,2,8,4,3,7,9,5,7,7,4,7,4,9,4,7,0,1,1,1,7,4,0,0,6};
     num = solution.plusOne(num);
 
     for (int n : num)

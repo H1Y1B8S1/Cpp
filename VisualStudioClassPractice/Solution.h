@@ -11,7 +11,7 @@ class solution
 {
 public:
 	//Q66 Plus One.
-	std::vector<int> plus_one_66(std::vector<int>& digits);
+	static std::vector<int> plus_one_66(std::vector<int>& digits);
 };
 
 
