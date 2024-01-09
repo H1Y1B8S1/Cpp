@@ -31,6 +31,8 @@ ipch/
 *.opendb
 *.db-shm
 *.db-wal
+*.vs
+*.vscode
 
 
 # Fortran module files
