@@ -1,4 +1,6 @@
 #include "Solution.h"
+
+#include <algorithm>
 #include <cmath>
 
 //66
@@ -54,21 +56,39 @@ void solution::merge_88(std::vector<int>& nums1, int m, std::vector<int>& nums2,
 	}
 
 
-	while(ptr2>=0)
+	while (ptr2 >= 0)
 	{
 		nums1[ptr--] = nums2[ptr2--];
 	}
-
-	
 }
 
 //169
-int solution::majority_element(std::vector<int>& nums)
+int solution::majority_element_167(std::vector<int>& nums)
 {
+	int number = NULL;
+	int count = 0;
+
+	for (int n : nums) {
+		if (count == 0) {
+			number = n;
+			count = 1;
+		}
+		else if (number == n) {
+			count++;
+
+		}
+		else {
+			count--;
+		}
+	}
+
+	// std::cout << count<<" ";
+	return number;
+
 }
 
 //263
-void solution::move_zeroes(std::vector<int>& nums)
+void solution::move_zeroes_283(std::vector<int>& nums)
 {
 	int countZeroes = 0;
 
