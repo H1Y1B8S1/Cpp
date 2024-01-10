@@ -6,16 +6,17 @@ int main(int argc, char* argv[])
 {
 	// main class to solve all problem
 
-	std::vector<int> nums = { 0, 1, 0, 3, 12 };
-	std::vector<int> nums1 = { 0, 0, 1,};
+	std::vector<int> arr1 = { 1,2,3,0,0,0 };
+	std::vector<int> arr2 = { 2,5,6, };
 
+	int m, n;
 
-	solution::move_zeroes(nums1);
+	solution::merge_88(arr1, m = 3, arr2, n = 3);
 
-	for (int n : nums1)
-	{
-		std::cout << n << " ";
+	for (int num : arr1) {
+		std::cout << num << " ";
 	}
+
 	return 0;
 }
 
