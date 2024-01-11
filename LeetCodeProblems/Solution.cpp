@@ -65,24 +65,54 @@ void solution::merge_88(std::vector<int>& nums1, int m, std::vector<int>& nums2,
 //121
 int solution::max_profit_121(std::vector<int>& prices)
 {
-	auto ptr_buy = prices.begin();
-	auto ptr_sell = std::next(ptr_buy);
+	if (prices.size() < 2)
+	{
+		return 0; // Not enough prices to make a profit
+	}
 
-	int buy = *ptr_buy, sell = *ptr_sell;
-
+	int minPrice = prices[0];
+	int maxProfit = 0;
 
 	for (int i = 1; i < prices.size(); ++i)
 	{
-		
+		minPrice = std::min(minPrice, prices[i]);
+		maxProfit = std::max(maxProfit, prices[i] - minPrice);
 	}
 
+	return maxProfit;
+	//#########################################################################
+	//if (prices.size() < 2) {
+	//	return 0;  // Not enough prices to make a profit
+	//}
 
-	std::cout << *ptr_buy << " ";
-	std::cout << *ptr_sell << " ";
-	return sell - buy;
+	//auto ptr_buy = prices.begin();
+	//auto ptr_sell = std::next(ptr_buy);
+
+	//int buy = *ptr_buy, sell = *ptr_sell;
+
+	//for (int i = 1; i < prices.size(); ++i) {
+	//	if (buy > prices[i]) {
+	//		buy = prices[i];
+	//		ptr_buy = prices.begin() + i;
+
+	//		// Check if there is a next element after ptr_buy
+	//		if (std::next(ptr_buy) != prices.end()) {
+	//			ptr_sell = std::next(ptr_buy);
+	//			sell = *ptr_sell;
+	//		}
+	//	}
+	//	else if (sell < *ptr_sell) {
+	//		sell = *ptr_sell;
+	//	}
+
+	//	// Increment ptr_sell only if it's not at the end
+	//	if (ptr_sell != std::prev(prices.end())) {
+	//		++ptr_sell;
+	//	}
+	//}
 }
 
-//169
+//169-Boyer-Moore's voting Algo.
 int solution::majority_element_167(std::vector<int>& nums)
 {
 	int number = NULL;

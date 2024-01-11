@@ -10,7 +10,7 @@ int main(int argc, char* argv[])
 		arr2 = { 7, 1, 5, 3, 6, 4 },
 		arr3 = { 3, 3, 4, 7, 1, 5, 3, 6, 4, 7, 6, 4, 3, 1 };
 
-	int number = solution::max_profit_121(arr3);
+	int number = solution::max_profit_121(arr1);
 
 
 	std::cout << number << "\n";
