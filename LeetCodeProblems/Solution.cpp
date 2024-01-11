@@ -62,29 +62,51 @@ void solution::merge_88(std::vector<int>& nums1, int m, std::vector<int>& nums2,
 	}
 }
 
+//121
+int solution::max_profit_121(std::vector<int>& prices)
+{
+	auto ptr_buy = prices.begin();
+	auto ptr_sell = std::next(ptr_buy);
+
+	int buy = *ptr_buy, sell = *ptr_sell;
+
+
+	for (int i = 1; i < prices.size(); ++i)
+	{
+		
+	}
+
+
+	std::cout << *ptr_buy << " ";
+	std::cout << *ptr_sell << " ";
+	return sell - buy;
+}
+
 //169
 int solution::majority_element_167(std::vector<int>& nums)
 {
 	int number = NULL;
 	int count = 0;
 
-	for (int n : nums) {
-		if (count == 0) {
+	for (int n : nums)
+	{
+		if (count == 0)
+		{
 			number = n;
 			count = 1;
 		}
-		else if (number == n) {
+		else if (number == n)
+		{
 			count++;
-
 		}
-		else {
+		else
+		{
 			count--;
 		}
 	}
 
 	// std::cout << count<<" ";
 	return number;
-
 }
 
 //263

@@ -16,6 +16,9 @@ public:
 	//88 Merge Sorted Array
 	static void merge_88(std::vector<int>& nums1, int m, std::vector<int>& nums2, int n);
 
+	//121
+	static int max_profit_121(std::vector<int>& prices);
+
 	//169 
 	//Boyer-Moore's Voting Algorithm
 	static int majority_element_167(std::vector<int>& nums);

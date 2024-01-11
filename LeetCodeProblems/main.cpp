@@ -6,11 +6,13 @@ int main(int argc, char* argv[])
 {
 	// main class to solve all problem
 
-	std::vector<int> arr1 = {2, 2, 2, 0, 0, 3, 3,};
-	std::vector<int> arr2 = {1, 1, 1, 2, 2, 2, 2};
-	std::vector<int> arr3 = {3, 3, 4};
+	std::vector<int> arr1 = { 7, 6, 4, 3, 1 },
+		arr2 = { 7, 1, 5, 3, 6, 4 },
+		arr3 = { 3, 3, 4, 7, 1, 5, 3, 6, 4, 7, 6, 4, 3, 1 };
 
-	int number = solution::majority_element_167(arr1);
+	int number = solution::max_profit_121(arr3);
+
+
 	std::cout << number << "\n";
 
 
