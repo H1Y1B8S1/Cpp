@@ -13,6 +13,9 @@ public:
 	//Q66 Plus One.
 	static std::vector<int> plus_one_66(std::vector<int>& digits);
 
+	//58
+	static int length_of_last_word_58(std::string s);
+
 	//88 Merge Sorted Array
 	static void merge_88(std::vector<int>& nums1, int m, std::vector<int>& nums2, int n);
 

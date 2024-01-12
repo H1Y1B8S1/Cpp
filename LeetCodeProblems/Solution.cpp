@@ -38,6 +38,28 @@ std::vector<int> solution::plus_one_66(std::vector<int>& digits)
 	return digits;
 }
 
+//58
+int solution::length_of_last_word_58(std::string s)
+{
+	auto ptr1 = s.rbegin();
+	int size = 0;
+
+	// Skip leading spaces
+	while (ptr1 != s.rend() && *ptr1 == ' ')
+	{
+		++ptr1;
+	}
+
+	// Count the characters of the last word
+	while (ptr1 != s.rend() && *ptr1 != ' ')
+	{
+		++size;
+		++ptr1;
+	}
+
+	return size;
+}
+
 //88
 void solution::merge_88(std::vector<int>& nums1, int m, std::vector<int>& nums2, int n)
 {
