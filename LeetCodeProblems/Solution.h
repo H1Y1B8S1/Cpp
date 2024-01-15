@@ -10,6 +10,9 @@
 class solution
 {
 public:
+	//14
+	static std::string longest_common_prefix_14(std::vector<std::string>& strs);
+
 	//Q66 Plus One.
 	static std::vector<int> plus_one_66(std::vector<int>& digits);
 

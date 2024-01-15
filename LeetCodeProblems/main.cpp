@@ -10,17 +10,21 @@ int main(int argc, char* argv[])
 	                 arr2 = {7, 1, 5, 3, 6, 4},
 	                 arr3 = {3, 3, 4, 7, 1, 5, 3, 6, 4, 7, 6, 4, 3, 1};
 
+	std::vector<std::string> arr4 = {"flower", "flow", "flight"},
+	                         arr5 = {"dog", "racecar", "car"};
+
 	std::string string1 = "   fly me   to   the moon  ",
 	            string2 = "a ";
 
 	int number = solution::length_of_last_word_58(string2);
+	std::string text = solution::longest_common_prefix_14(arr4);
 
 
-	std::cout << number << "\n";
+	std::cout << text << "\n";
 
 
-	std::cout << " \n";
-	/*for (int num : arr1)
+	/*std::cout << " \n";
+	for (int num : arr1)
 	{
 		std::cout << num << " ";
 	}*/

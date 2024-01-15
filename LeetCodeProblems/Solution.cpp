@@ -3,6 +3,39 @@
 #include <algorithm>
 #include <cmath>
 
+//14
+std::string solution::longest_common_prefix_14(std::vector<std::string>& strs)
+{
+	if (strs.empty())
+	{
+		return ""; // Handle the case when the vector is empty
+	}
+
+	// Take the first string as the initial common prefix
+	std::string commonPrefix = strs[0];
+
+	for (int i = 1; i < strs.size(); ++i)
+	{
+		int j = 0;
+		// Compare characters until the end of the common prefix or the end of the current string
+		while (j < commonPrefix.length() && j < strs[i].length() && commonPrefix[j] == strs[i][j])
+		{
+			++j;
+		}
+
+		// Update the common prefix with the matching characters
+		commonPrefix.erase(j);
+
+		// If the common prefix becomes empty, break as there is no further common prefix
+		if (commonPrefix.empty())
+		{
+			break;
+		}
+	}
+
+	return commonPrefix;
+}
+
 //66
 std::vector<int> solution::plus_one_66(std::vector<int>& digits)
 {
