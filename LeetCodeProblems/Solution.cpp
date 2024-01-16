@@ -36,6 +36,7 @@ std::string solution::longest_common_prefix_14(std::vector<std::string>& strs)
 	return commonPrefix;
 }
 
+//28
 int solution::str_str_28(std::string haystack, std::string needle)
 {
 	int m = haystack.size();
