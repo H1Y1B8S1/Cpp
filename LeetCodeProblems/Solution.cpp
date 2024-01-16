@@ -36,6 +36,31 @@ std::string solution::longest_common_prefix_14(std::vector<std::string>& strs)
 	return commonPrefix;
 }
 
+int solution::str_str_28(std::string haystack, std::string needle)
+{
+	int m = haystack.size();
+	int n = needle.size();
+
+	for (int i = 0; i <= m - n; ++i)
+	{
+		int j;
+		for (j = 0; j < n; ++j)
+		{
+			if (haystack[i + j] != needle[j])
+			{
+				break;
+			}
+		}
+
+		if (j == n)
+		{
+			return i;
+		}
+	}
+
+	return -1;
+}
+
 //66
 std::vector<int> solution::plus_one_66(std::vector<int>& digits)
 {

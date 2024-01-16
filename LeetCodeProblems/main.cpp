@@ -13,14 +13,14 @@ int main(int argc, char* argv[])
 	std::vector<std::string> arr4 = {"flower", "flow", "flight"},
 	                         arr5 = {"dog", "racecar", "car"};
 
-	std::string string1 = "   fly me   to   the moon  ",
-	            string2 = "a ";
+	std::string string1 = "mississippi",
+	            string2 = "issip";
 
-	int number = solution::length_of_last_word_58(string2);
+	int number = solution::str_str_28(string1,string2);
 	std::string text = solution::longest_common_prefix_14(arr4);
 
 
-	std::cout << text << "\n";
+	std::cout << number << "\n";
 
 
 	/*std::cout << " \n";

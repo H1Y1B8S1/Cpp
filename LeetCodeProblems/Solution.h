@@ -13,6 +13,9 @@ public:
 	//14
 	static std::string longest_common_prefix_14(std::vector<std::string>& strs);
 
+	//28
+	static int str_str_28(std::string haystack, std::string needle);
+
 	//Q66 Plus One.
 	static std::vector<int> plus_one_66(std::vector<int>& digits);
 
