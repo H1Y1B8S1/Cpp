@@ -12,28 +12,28 @@ std::string solution::longest_common_prefix_14(std::vector<std::string>& strs)
 	}
 
 	// Take the first string as the initial common prefix
-	std::string commonPrefix = strs[0];
+	std::string common_prefix = strs[0];
 
 	for (int i = 1; i < strs.size(); ++i)
 	{
 		int j = 0;
 		// Compare characters until the end of the common prefix or the end of the current string
-		while (j < commonPrefix.length() && j < strs[i].length() && commonPrefix[j] == strs[i][j])
+		while (j < common_prefix.length() && j < strs[i].length() && common_prefix[j] == strs[i][j])
 		{
 			++j;
 		}
 
 		// Update the common prefix with the matching characters
-		commonPrefix.erase(j);
+		common_prefix.erase(j);
 
 		// If the common prefix becomes empty, break as there is no further common prefix
-		if (commonPrefix.empty())
+		if (common_prefix.empty())
 		{
 			break;
 		}
 	}
 
-	return commonPrefix;
+	return common_prefix;
 }
 
 //28
