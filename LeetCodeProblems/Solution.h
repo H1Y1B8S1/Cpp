@@ -28,6 +28,12 @@ public:
 	//121
 	static int max_profit_121(std::vector<int>& prices);
 
+	//125
+	static bool is_palindrome_125(std::string s);
+
+	//150
+	static bool is_subsequence_150(std::string s, std::string t);
+
 	//169 
 	//Boyer-Moore's Voting Algorithm
 	static int majority_element_167(std::vector<int>& nums);

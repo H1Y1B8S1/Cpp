@@ -193,6 +193,71 @@ int solution::max_profit_121(std::vector<int>& prices)
 	//}
 }
 
+//125
+bool solution::is_palindrome_125(std::string s)
+{
+	for (char& c : s)
+	{
+		c = tolower(c);
+	}
+
+	// Step 2: Remove non-alphanumeric characters
+	s.erase(std::remove_if(s.begin(), s.end(), [](char c)
+	{
+		return !isalnum(c);
+	}), s.end());
+
+	// Step 3: Check if it's a palindrome
+	int left = 0;
+	int right = s.length() - 1;
+
+	while (left < right)
+	{
+		if (s[left] != s[right])
+		{
+			return false;
+		}
+		left++;
+		right--;
+	}
+
+	return true;
+
+
+	//std::string lowercaseString;
+	//// Construct the lowercase string without non-alphabetic characters
+	//for (char character : s) {
+	//	// Check if the character is an uppercase letter
+	//	if (character >= 'A' && character <= 'Z') {
+	//		// Convert to lowercase by adding the ASCII offset
+	//		lowercaseString += character + ('a' - 'A');
+	//	}
+	//	// Check if the character is a lowercase letter
+	//	else if (character >= 'a' && character <= 'z') {
+	//		lowercaseString += character;
+	//	}
+	//	// Ignore other characters (non-alphabetic)
+	//}
+	//bool isPalindrome = true;
+	//int length = lowercaseString.length();
+	//// Updated palindrome checking logic
+	//if (length > 1) {
+	//	for (int i = 0; i < length / 2; ++i) {
+	//		if (lowercaseString[i] != lowercaseString[length - i - 1]) {
+	//			isPalindrome = false;
+	//			break;
+	//		}
+	//	}
+	//}
+}
+
+//150
+bool solution::is_subsequence_150(std::string s, std::string t)
+{
+
+	return false;
+}
+
 //169-Boyer-Moore's voting Algo.
 int solution::majority_element_167(std::vector<int>& nums)
 {
