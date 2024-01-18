@@ -254,6 +254,19 @@ bool solution::is_palindrome_125(std::string s)
 //150
 bool solution::is_subsequence_150(std::string s, std::string t)
 {
+	int sp = 0;
+	if (s.length() == 0 && t.length() == 0)
+		return true;
+
+	for (char c : t)
+	{
+		if (c == s[sp])
+		{
+			sp++;
+		}
+		if (s[sp] == '\0')
+			return true;
+	}
 
 	return false;
 }

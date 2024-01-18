@@ -13,12 +13,12 @@ int main(int argc, char* argv[])
 	std::vector<std::string> arr4 = {"flower", "flow", "flight"},
 	                         arr5 = {"dog", "racecar", "car"};
 
-	std::string string1 = "abc",
+	std::string string1 = "axc",
 		string2 = "ahbgdc",
 		string3 = "0P";
 
-	int number = solution::str_str_28(string1,string2);
-	std::string text = solution::longest_common_prefix_14(arr4);
+	//int number = solution::str_str_28(string1,string2);
+	//std::string text = solution::longest_common_prefix_14(arr4);
 	const bool flag = solution::is_subsequence_150(string1,string2);
 
 
