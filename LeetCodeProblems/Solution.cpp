@@ -353,3 +353,34 @@ bool solution::can_construct_383(std::string ransomNote, std::string magazine)
 
 	return true;
 }
+
+//931
+int solution::min_falling_path_sum_931(std::vector<std::vector<int>>& matrix)
+{
+	int rows = matrix.size();
+	int cols = matrix[0].size();
+
+	// Start from the second-to-last row and update the matrix with minimum falling path sums
+	for (int i = rows - 2; i >= 0; --i)
+	{
+		for (int j = 0; j < cols; ++j)
+		{
+			int best_next_move = matrix[i + 1][j]; // Initialize with the value directly below
+
+			if (j > 0)
+			{
+				best_next_move = std::min(best_next_move, matrix[i + 1][j - 1]); // Check the left-bottom neighbor
+			}
+
+			if (j < cols - 1)
+			{
+				best_next_move = std::min(best_next_move, matrix[i + 1][j + 1]); // Check the right-bottom neighbor
+			}
+
+			matrix[i][j] += best_next_move; // Update the current cell with the minimum falling path sum
+		}
+	}
+
+	// The minimum falling path sum will be the minimum value in the first row
+	return *std::min_element(matrix[0].begin(), matrix[0].end());
+}

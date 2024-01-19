@@ -43,6 +43,9 @@ public:
 
 	//383
 	static bool can_construct_383(std::string ransomNote, std::string magazine);
+
+	//931
+	static int min_falling_path_sum_931(std::vector<std::vector<int>>& matrix);
 };
 
 

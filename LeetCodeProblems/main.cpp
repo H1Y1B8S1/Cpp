@@ -6,30 +6,33 @@ int main(int argc, char* argv[])
 {
 	// main class to perform all problem
 
-	std::vector<int> arr1 = {7, 6, 4, 3, 1},
-	                 arr2 = {7, 1, 5, 3, 6, 4},
-	                 arr3 = {3, 3, 4, 7, 1, 5, 3, 6, 4, 7, 6, 4, 3, 1};
+	std::vector<int> arr1 = {2, 1, 3},
+	                 arr2 = {6, 5, 4},
+	                 arr3 = {6, 5, 4};
 
 	std::vector<std::string> arr4 = {"flower", "flow", "flight"},
 	                         arr5 = {"dog", "racecar", "car"};
+
+	std::vector<std::vector<int>> matrix = {
+		                              {2, 1, 3},
+		                              {6, 5, 4},
+		                              {7, 8, 9}
+	                              },
+	                              matrix2 = {
+		                              {-19, 57},
+		                              {-40, -5}
+	                              };
+
 
 	std::string string1 = "aa",
 	            string2 = "ab",
 	            string3 = "0P";
 
-	//int number = solution::str_str_28(string1,string2);
+	int number = solution::min_falling_path_sum_931(matrix);
 	//std::string text = solution::longest_common_prefix_14(arr4);
-	const bool flag = solution::can_construct_383(string1, string2);
+	//const bool flag = solution::can_construct_383(string1, string2);
 
-	std::cout << " \n" << flag << "\n";
-
-
-	/*std::cout << " \n";
-	for (int num : arr1)
-	{
-		std::cout << num << " ";
-	}*/
-	std::cout << " \n";
+	std::cout << "\n" << number << "\n";
 
 	return 0;
 }
