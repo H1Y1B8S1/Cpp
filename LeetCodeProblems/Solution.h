@@ -40,6 +40,9 @@ public:
 
 	//283
 	static void move_zeroes_283(std::vector<int>& nums);
+
+	//383
+	static bool can_construct_383(std::string ransomNote, std::string magazine);
 };
 
 

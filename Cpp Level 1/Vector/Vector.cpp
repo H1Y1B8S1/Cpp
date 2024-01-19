@@ -46,5 +46,14 @@ int main()
     std::cout << "Size: " << numbers.size() << std::endl;
     std::cout << "Capacity: " << numbers.capacity() << std::endl;
 
+    std::vector<int> myVector(26, 0);
+
+    // Display the initialized vector
+    std::cout << "Initialized Vector: ";
+    for (int value : myVector)
+    {
+        std::cout << value << " ";
+    }
+
     return 0;
 }

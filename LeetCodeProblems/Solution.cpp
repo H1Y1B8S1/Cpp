@@ -326,3 +326,30 @@ void solution::move_zeroes_283(std::vector<int>& nums)
 		nums.push_back(0); // Appending zeroes at the end
 	}
 }
+
+//383
+bool solution::can_construct_383(std::string ransomNote, std::string magazine)
+{
+	//97 - 122
+	std::vector<int> hash_map(26, 0);
+
+
+	for (char c : magazine)
+	{
+		hash_map[c - 97]++;
+	}
+
+	for (char c : ransomNote)
+	{
+		if (hash_map[c - 97] != 0)
+		{
+			hash_map[c - 97]--;
+		}
+		else
+		{
+			return false;
+		}
+	}
+
+	return true;
+}
