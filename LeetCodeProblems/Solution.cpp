@@ -2,6 +2,7 @@
 
 #include <algorithm>
 #include <cmath>
+#include <map>
 
 //14
 std::string solution::longest_common_prefix_14(std::vector<std::string>& strs)
@@ -203,9 +204,9 @@ bool solution::is_palindrome_125(std::string s)
 
 	// Step 2: Remove non-alphanumeric characters
 	s.erase(std::remove_if(s.begin(), s.end(), [](char c)
-	{
-		return !isalnum(c);
-	}), s.end());
+		{
+			return !isalnum(c);
+		}), s.end());
 
 	// Step 3: Check if it's a palindrome
 	int left = 0;
@@ -301,11 +302,26 @@ int solution::majority_element_167(std::vector<int>& nums)
 //205
 bool solution::is_isomorphic_205(std::string s, std::string t)
 {
-	std::vector<int> map(26, 0);
+	std::map<char, char> map;
 
-	for(char c:s)
+	if (s.size() != t.size())
 	{
-		
+		return false;
+	}
+	else
+	{
+		for (int i = 0; i < s.size(); ++i)
+		{
+			if(map.find(s[i])==map.end())
+			{
+				map[s[i]] = t[i];
+			}
+			else
+			{
+				if (map[s[i]] != t[i])
+					return false;
+			}
+		}
 	}
 
 	return true;

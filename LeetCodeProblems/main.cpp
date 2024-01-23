@@ -24,8 +24,8 @@ int main(int argc, char* argv[])
 	                              };
 
 
-	std::string string1 = "egg",
-	            string2 = "add",
+	std::string string1 = "badc",
+	            string2 = "baba",
 	            string3 = "0P";
 
 	//int number = solution::min_falling_path_sum_931(matrix);

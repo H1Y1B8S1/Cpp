@@ -15,7 +15,7 @@ int main(int argc, char const *argv[])
         std::cout << pair.first << " : " << pair.second << "\n";
     }
 
-    // check key excist in the map.
+    // check key exist in the map.
     if (myMap.find("sid") != myMap.end()) // "sid" does not exist, "Sid" does.
     {
         std::cout << true << "\n";
