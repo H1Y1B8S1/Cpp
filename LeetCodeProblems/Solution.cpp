@@ -303,6 +303,7 @@ int solution::majority_element_167(std::vector<int>& nums)
 bool solution::is_isomorphic_205(std::string s, std::string t)
 {
 	std::map<char, char> map;
+	std::vector<char> mapc;
 
 	if (s.size() != t.size())
 	{
@@ -314,7 +315,15 @@ bool solution::is_isomorphic_205(std::string s, std::string t)
 		{
 			if(map.find(s[i])==map.end())
 			{
-				map[s[i]] = t[i];
+				if(std::find(mapc.begin(),mapc.end(),t[i])==mapc.end())
+				{
+					mapc.push_back(t[i]);
+					map[s[i]] = t[i];
+				}
+				else
+				{
+					return false;
+				}
 			}
 			else
 			{
