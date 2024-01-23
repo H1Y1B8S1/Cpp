@@ -298,6 +298,19 @@ int solution::majority_element_167(std::vector<int>& nums)
 	return number;
 }
 
+//205
+bool solution::is_isomorphic_205(std::string s, std::string t)
+{
+	std::vector<int> map(26, 0);
+
+	for(char c:s)
+	{
+		
+	}
+
+	return true;
+}
+
 //263
 void solution::move_zeroes_283(std::vector<int>& nums)
 {

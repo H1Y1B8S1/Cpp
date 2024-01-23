@@ -24,15 +24,15 @@ int main(int argc, char* argv[])
 	                              };
 
 
-	std::string string1 = "aa",
-	            string2 = "ab",
+	std::string string1 = "egg",
+	            string2 = "add",
 	            string3 = "0P";
 
-	int number = solution::min_falling_path_sum_931(matrix);
+	//int number = solution::min_falling_path_sum_931(matrix);
 	//std::string text = solution::longest_common_prefix_14(arr4);
-	//const bool flag = solution::can_construct_383(string1, string2);
+	const bool flag = solution::is_isomorphic_205(string1, string2);
 
-	std::cout << "\n" << number << "\n";
+	std::cout << "\n" << flag << "\n";
 
 	return 0;
 }

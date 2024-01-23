@@ -38,6 +38,9 @@ public:
 	//Boyer-Moore's Voting Algorithm
 	static int majority_element_167(std::vector<int>& nums);
 
+	//205
+	static bool is_isomorphic_205(std::string s, std::string t);
+
 	//283
 	static void move_zeroes_283(std::vector<int>& nums);
 
