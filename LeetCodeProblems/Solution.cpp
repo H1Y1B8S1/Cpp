@@ -3,6 +3,7 @@
 #include <algorithm>
 #include <cmath>
 #include <map>
+#include <unordered_map>
 
 //14
 std::string solution::longest_common_prefix_14(std::vector<std::string>& strs)
@@ -204,9 +205,9 @@ bool solution::is_palindrome_125(std::string s)
 
 	// Step 2: Remove non-alphanumeric characters
 	s.erase(std::remove_if(s.begin(), s.end(), [](char c)
-		{
-			return !isalnum(c);
-		}), s.end());
+	{
+		return !isalnum(c);
+	}), s.end());
 
 	// Step 3: Check if it's a palindrome
 	int left = 0;
@@ -302,33 +303,38 @@ int solution::majority_element_167(std::vector<int>& nums)
 //205
 bool solution::is_isomorphic_205(std::string s, std::string t)
 {
-	std::map<char, char> map;
-	std::vector<char> mapc;
-
 	if (s.size() != t.size())
 	{
 		return false;
 	}
-	else
+
+	std::unordered_map<char, char> mapping;
+	std::vector<char> mappedCharacters;
+
+	for (std::size_t i = 0; i < s.size(); ++i)
 	{
-		for (int i = 0; i < s.size(); ++i)
+		if (mapping.find(s[i]) == mapping.end())
 		{
-			if(map.find(s[i])==map.end())
+			// Character s[i] is not mapped yet
+			if (std::find(mappedCharacters.begin(), mappedCharacters.end(), t[i]) == mappedCharacters.end())
 			{
-				if(std::find(mapc.begin(),mapc.end(),t[i])==mapc.end())
-				{
-					mapc.push_back(t[i]);
-					map[s[i]] = t[i];
-				}
-				else
-				{
-					return false;
-				}
+				// t[i] is not used for mapping, so we can map s[i] to t[i]
+				mappedCharacters.push_back(t[i]);
+				mapping[s[i]] = t[i];
 			}
 			else
 			{
-				if (map[s[i]] != t[i])
-					return false;
+				// t[i] is already used for mapping, return false
+				return false;
+			}
+		}
+		else
+		{
+			// Character s[i] is already mapped
+			if (mapping[s[i]] != t[i])
+			{
+				// Mapping does not match, return false
+				return false;
 			}
 		}
 	}
