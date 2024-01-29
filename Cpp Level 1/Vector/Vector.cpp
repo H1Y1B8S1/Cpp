@@ -55,5 +55,14 @@ int main()
         std::cout << value << " ";
     }
 
+    //=--------------------------------------------------------------------------------------
+    // finding and checking value in vector.
+    // if (std::find(mappedCharacters.begin(), mappedCharacters.end(), t[i]) == mappedCharacters.end())
+    // {
+    //     // t[i] is not used for mapping, so we can map s[i] to t[i]
+    //     mappedCharacters.push_back(t[i]);
+    //     mapping[s[i]] = t[i];
+    // }
+
     return 0;
 }

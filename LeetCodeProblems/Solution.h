@@ -44,6 +44,9 @@ public:
 	//283
 	static void move_zeroes_283(std::vector<int>& nums);
 
+	//290
+	static bool word_pattern_290(std::string pattern, std::string s);
+
 	//383
 	static bool can_construct_383(std::string ransomNote, std::string magazine);
 

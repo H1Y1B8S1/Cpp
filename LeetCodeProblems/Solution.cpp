@@ -4,6 +4,7 @@
 #include <cmath>
 #include <map>
 #include <unordered_map>
+#include <sstream>
 
 //14
 std::string solution::longest_common_prefix_14(std::vector<std::string>& strs)
@@ -369,6 +370,54 @@ void solution::move_zeroes_283(std::vector<int>& nums)
 	{
 		nums.push_back(0); // Appending zeroes at the end
 	}
+}
+
+//290
+bool solution::word_pattern_290(std::string pattern, std::string s)
+{
+	std::unordered_map<char, std::string> patternToWord;
+	std::unordered_map<std::string, char> wordToPattern;
+
+	std::istringstream iss(s);
+	std::vector<std::string> words;
+	std::string word;
+
+	// Split the input string into words
+	while (iss >> word)
+	{
+		words.push_back(word);
+	}
+
+	// Check if the number of words matches the pattern lengtha
+	if (pattern.length() != words.size())
+	{
+		return false;
+	}
+
+	// Iterate through each character and word, updating the hash maps
+	for (int i = 0; i < pattern.length(); ++i)
+	{
+		char currentChar = pattern[i];
+		std::string currentWord = words[i];
+
+		// Check if the current character is already mapped to a different word
+		if (patternToWord.find(currentChar) != patternToWord.end() && patternToWord[currentChar] != currentWord)
+		{
+			return false;
+		}
+
+		// Check if the current word is already mapped to a different character
+		if (wordToPattern.find(currentWord) != wordToPattern.end() && wordToPattern[currentWord] != currentChar)
+		{
+			return false;
+		}
+
+		// Update the hash maps
+		patternToWord[currentChar] = currentWord;
+		wordToPattern[currentWord] = currentChar;
+	}
+
+	return true;
 }
 
 //383

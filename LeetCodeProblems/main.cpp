@@ -24,13 +24,13 @@ int main(int argc, char* argv[])
 	                              };
 
 
-	std::string string1 = "badc",
-	            string2 = "baba",
+	std::string string1 = "abba",
+	            string2 = "dog cat cat dog",
 	            string3 = "0P";
 
 	//int number = solution::min_falling_path_sum_931(matrix);
 	//std::string text = solution::longest_common_prefix_14(arr4);
-	const bool flag = solution::is_isomorphic_205(string1, string2);
+	const bool flag = solution::word_pattern_290(string1, string2);
 
 	std::cout << "\n" << flag << "\n";
 
