@@ -42,7 +42,7 @@ public:
 	static bool is_isomorphic_205(std::string s, std::string t);
 
 	//242 
-	static bool is_Anagram_242(std::string s, std::string t);
+	static bool is_anagram_242(std::string s, std::string t);
 
 	//283
 	static void move_zeroes_283(std::vector<int>& nums);

@@ -344,9 +344,28 @@ bool solution::is_isomorphic_205(std::string s, std::string t)
 }
 
 //242
-bool solution::is_Anagram_242(std::string s, std::string t)
+bool solution::is_anagram_242(std::string s, std::string t)
 {
-	return true;
+	std::vector<int> mapping(26, 0);
+
+	for (const char c : s)
+	{
+		mapping[c - 97]++;
+	}
+
+	if (t.size() == s.size())
+	{
+		for (const char c : t)
+		{
+			if (mapping[c - 97] == 0)
+				return false;
+			mapping[c - 97]--;
+		}
+		return true;
+	}
+
+
+	return false;
 }
 
 //263
