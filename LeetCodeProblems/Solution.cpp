@@ -9,6 +9,22 @@
 std::vector<int> solution::two_sum_01(std::vector<int>& nums, int target)
 {
 	std::vector<int> result;
+	int index = 0;
+
+	for (const int i : nums)
+	{
+		for (int j = 1 + index; j < nums.size(); j++)
+		{
+			if (nums[j] == target - i)
+			{
+				result.push_back(index);
+				result.push_back(j);
+				return result;
+			}
+		}
+
+		index++;
+	}
 
 	return result;
 }

@@ -6,11 +6,11 @@ int main(int argc, char* argv[])
 {
 	// main class to perform all problem
 
-	int num1 = 9;
+	int num1 = 92;
 
 	std::vector<int> arr1 = { 2,7,11,15 },
-	                 arr2 = {6, 5, 4},
-	                 arr3 = {6, 5, 4};
+	                 arr2 = { -1,-2,-3,-4,-5 },
+	                 arr3 = { 3,2,95,4,-3 };
 
 	std::vector<std::string> arr4 = {"flower", "flow", "flight"},
 	                         arr5 = {"dog", "racecar", "car"};
@@ -39,9 +39,9 @@ int main(int argc, char* argv[])
 	//const bool flag = solution::is_anagram_242(string1, string2);
 	//std::cout << "\n" << flag << "\n";
 
-	const std::vector<int> result = solution::two_sum_01(arr1, num1);
+	const std::vector<int> result = solution::two_sum_01(arr3, num1);
 	std::cout << "[";
-	for(int i:result)
+	for(const int i:result)
 	{
 		std::cout << i<<",";
 	}
