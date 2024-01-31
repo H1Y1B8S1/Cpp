@@ -343,6 +343,12 @@ bool solution::is_isomorphic_205(std::string s, std::string t)
 	return true;
 }
 
+//242
+bool solution::is_Anagram_242(std::string s, std::string t)
+{
+	return true;
+}
+
 //263
 void solution::move_zeroes_283(std::vector<int>& nums)
 {
