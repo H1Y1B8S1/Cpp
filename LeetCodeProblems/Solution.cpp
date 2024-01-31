@@ -6,6 +6,13 @@
 #include <unordered_map>
 #include <sstream>
 
+std::vector<int> solution::two_sum_01(std::vector<int>& nums, int target)
+{
+	std::vector<int> result;
+
+	return result;
+}
+
 //14
 std::string solution::longest_common_prefix_14(std::vector<std::string>& strs)
 {

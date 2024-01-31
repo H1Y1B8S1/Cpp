@@ -10,6 +10,9 @@
 class solution
 {
 public:
+	//01
+	static std::vector<int> two_sum_01(std::vector<int>& nums, int target);
+
 	//14
 	static std::string longest_common_prefix_14(std::vector<std::string>& strs);
 
