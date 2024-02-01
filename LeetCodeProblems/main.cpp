@@ -6,7 +6,7 @@ int main(int argc, char* argv[])
 {
 	// main class to perform all problem
 
-	int num1 = 92;
+	int num1 = 19;
 
 	std::vector<int> arr1 = { 2,7,11,15 },
 	                 arr2 = { -1,-2,-3,-4,-5 },
@@ -36,16 +36,16 @@ int main(int argc, char* argv[])
 	//std::string text = solution::longest_common_prefix_14(arr4);
 	//std::cout << "\n" << text << "\n";
 
-	//const bool flag = solution::is_anagram_242(string1, string2);
-	//std::cout << "\n" << flag << "\n";
+	const bool flag = solution::is_happy_202(num1);
+	std::cout << "\n" << flag << "\n";
 
-	const std::vector<int> result = solution::two_sum_01(arr3, num1);
+	/*const std::vector<int> result = solution::two_sum_01(arr3, num1);
 	std::cout << "[";
 	for(const int i:result)
 	{
 		std::cout << i<<",";
 	}
-	std::cout << "]";
+	std::cout << "]";*/
 
 	return 0;
 }

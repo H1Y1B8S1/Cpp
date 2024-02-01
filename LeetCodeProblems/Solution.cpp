@@ -13,13 +13,28 @@ std::vector<int> solution::two_sum_01(std::vector<int>& nums, int target)
 
 	for (const int i : nums)
 	{
-		for (int j = 1 + index; j < nums.size(); j++)
+		if (i <= target || i <= 0)
 		{
-			if (nums[j] == target - i)
+			for (int j = 1 + index; j < nums.size(); j++)
 			{
-				result.push_back(index);
-				result.push_back(j);
-				return result;
+				if (nums[j] == target - i)
+				{
+					result.push_back(index);
+					result.push_back(j);
+					return result;
+				}
+			}
+		}
+		else
+		{
+			for (int j = 1 + index; j < nums.size(); j++)
+			{
+				if (nums[j] == target - i)
+				{
+					result.push_back(index);
+					result.push_back(j);
+					return result;
+				}
 			}
 		}
 
@@ -322,6 +337,20 @@ int solution::majority_element_167(std::vector<int>& nums)
 
 	// std::cout << count<<" ";
 	return number;
+}
+
+//202
+bool solution::is_happy_202(int n)
+{
+	std::vector<int> storage;
+
+	std::cout << n <<" ";
+	std::cout << n % 10 << " ";
+	n /= 10;
+	std::cout << n % 10 << " ";
+	
+
+	return true;
 }
 
 //205
