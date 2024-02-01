@@ -5,6 +5,7 @@
 #include <map>
 #include <unordered_map>
 #include <sstream>
+#include <unordered_set>
 
 std::vector<int> solution::two_sum_01(std::vector<int>& nums, int target)
 {
@@ -244,9 +245,9 @@ bool solution::is_palindrome_125(std::string s)
 
 	// Step 2: Remove non-alphanumeric characters
 	s.erase(std::remove_if(s.begin(), s.end(), [](char c)
-	{
-		return !isalnum(c);
-	}), s.end());
+		{
+			return !isalnum(c);
+		}), s.end());
 
 	// Step 3: Check if it's a palindrome
 	int left = 0;
@@ -342,15 +343,24 @@ int solution::majority_element_167(std::vector<int>& nums)
 //202
 bool solution::is_happy_202(int n)
 {
-	std::vector<int> storage;
+	std::unordered_set<int> seen;
 
-	std::cout << n <<" ";
-	std::cout << n % 10 << " ";
-	n /= 10;
-	std::cout << n % 10 << " ";
-	
+	while (n!=1 && seen.find(n) == seen.end() )
+	{
+		seen.insert(n);
 
-	return true;
+		int sum = 0;
+		while(n!=0)
+		{
+			const int digit = n % 10;
+			sum += digit * digit;
+			n /= 10;
+		}
+
+		n = sum;
+	}
+
+	return n==1;
 }
 
 //205

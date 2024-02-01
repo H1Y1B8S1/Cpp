@@ -6,7 +6,7 @@ int main(int argc, char* argv[])
 {
 	// main class to perform all problem
 
-	int num1 = 19;
+	int num1 = 119;
 
 	std::vector<int> arr1 = { 2,7,11,15 },
 	                 arr2 = { -1,-2,-3,-4,-5 },
