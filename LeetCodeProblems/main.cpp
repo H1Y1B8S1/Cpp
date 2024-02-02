@@ -6,10 +6,10 @@ int main(int argc, char* argv[])
 {
 	// main class to perform all problem
 
-	int num1 = 119;
+	int num1 = 2;
 
-	std::vector<int> arr1 = { 2,7,11,15 },
-	                 arr2 = { -1,-2,-3,-4,-5 },
+	std::vector<int> arr1 = { 1,2,3,1 },
+	                 arr2 = { 1,2,3,1,2,3 },
 	                 arr3 = { 3,2,95,4,-3 };
 
 	std::vector<std::string> arr4 = {"flower", "flow", "flight"},
@@ -36,7 +36,7 @@ int main(int argc, char* argv[])
 	//std::string text = solution::longest_common_prefix_14(arr4);
 	//std::cout << "\n" << text << "\n";
 
-	const bool flag = solution::is_happy_202(num1);
+	const bool flag = solution::contains_nearby_duplicate_219(arr1,num1);
 	std::cout << "\n" << flag << "\n";
 
 	/*const std::vector<int> result = solution::two_sum_01(arr3, num1);

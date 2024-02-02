@@ -47,6 +47,9 @@ public:
 	//205
 	static bool is_isomorphic_205(std::string s, std::string t);
 
+	//219
+	static bool contains_nearby_duplicate_219(std::vector<int>& nums, int k);
+
 	//242 
 	static bool is_anagram_242(std::string s, std::string t);
 

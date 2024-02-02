@@ -245,9 +245,9 @@ bool solution::is_palindrome_125(std::string s)
 
 	// Step 2: Remove non-alphanumeric characters
 	s.erase(std::remove_if(s.begin(), s.end(), [](char c)
-		{
-			return !isalnum(c);
-		}), s.end());
+	{
+		return !isalnum(c);
+	}), s.end());
 
 	// Step 3: Check if it's a palindrome
 	int left = 0;
@@ -345,12 +345,12 @@ bool solution::is_happy_202(int n)
 {
 	std::unordered_set<int> seen;
 
-	while (n!=1 && seen.find(n) == seen.end() )
+	while (n != 1 && seen.find(n) == seen.end())
 	{
 		seen.insert(n);
 
 		int sum = 0;
-		while(n!=0)
+		while (n != 0)
 		{
 			const int digit = n % 10;
 			sum += digit * digit;
@@ -360,7 +360,7 @@ bool solution::is_happy_202(int n)
 		n = sum;
 	}
 
-	return n==1;
+	return n == 1;
 }
 
 //205
@@ -403,6 +403,30 @@ bool solution::is_isomorphic_205(std::string s, std::string t)
 	}
 
 	return true;
+}
+
+//219
+bool solution::contains_nearby_duplicate_219(std::vector<int>& nums, int k)
+{
+	std::unordered_map<int, int> numIndex;
+
+	for (int i = 0; i < nums.size(); ++i)
+	{
+		// Check if the current element exists in the map
+		if (numIndex.find(nums[i]) != numIndex.end())
+		{
+			// Check the absolute difference between the current index and the stored index
+			if (std::abs(i - numIndex[nums[i]]) <= k)
+			{
+				return true; // Duplicate found within the specified range
+			}
+		}
+
+		// Update the index of the current element in the map
+		numIndex[nums[i]] = i;
+	}
+
+	return false; // No duplicates found within the specified range
 }
 
 //242
