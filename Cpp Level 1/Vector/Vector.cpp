@@ -5,7 +5,7 @@
 int main()
 {
 
-    std::vector<int> numbers = {10, 20, 30, 40, 50};
+    std::vector<int> numbers = {10, 20, 30, 40, 50,};
 
     // Adding elements to the end of the vector
     numbers.push_back(60);

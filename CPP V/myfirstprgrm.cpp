@@ -1,9 +1,10 @@
 #include <iostream>
 #include <vector>
 using namespace std;
+
+
 int nums[5],target;
 vector<int> func(int nums[],int target);
-
 
 int main()
 {
