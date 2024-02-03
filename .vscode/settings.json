@@ -47,7 +47,53 @@
         "xmemory": "cpp",
         "xstring": "cpp",
         "xtr1common": "cpp",
+<<<<<<< HEAD
         "xutility": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled"
+=======
+        "xutility": "cpp",
+        "*.txt": "bg3txt",
+        "array": "cpp",
+        "*.tcc": "cpp",
+        "cstdarg": "cpp",
+        "cwctype": "cpp",
+        "deque": "cpp",
+        "unordered_map": "cpp",
+        "vector": "cpp",
+        "algorithm": "cpp",
+        "functional": "cpp",
+        "memory_resource": "cpp",
+        "numeric": "cpp",
+        "random": "cpp",
+        "string": "cpp",
+        "fstream": "cpp",
+        "sstream": "cpp",
+        "list": "cpp",
+        "optional": "cpp",
+        "variant": "cpp"
+    },
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": "keyword.control.bg3txt",
+                "settings": {
+                    "foreground": "#C586C0"
+                }
+            },
+            {
+                "scope": "keyword.operator.bg3txt",
+                "settings": {
+                    "foreground": "#ffa200"
+                }
+            },
+            {
+                "scope": "string.first-column.bg3txt",
+                "settings": {
+                    "foreground": "#9CDCFE"
+                }
+            }
+        ]
+    }
+>>>>>>> e797bb85734f07933492eada4c4d01a3e3ae3b69
 }

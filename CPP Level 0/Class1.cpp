@@ -8,12 +8,16 @@ class Student
     string name = "siddharthsinh";
 
 public:
-    // Seting both value by calling this method.
-    void SetIdName(int i, string nam)
+    // constructor without any peramerts.
+    Student() {}
+
+    // Seting both value by constructor with parameters.
+    Student(int i, string nam)
     {
         id = i,
         name = nam;
     }
+
     // This method will return default value of id and name if you dont set new values.
     void GetIdName()
     {
@@ -23,10 +27,10 @@ public:
 
 int main(int argc, char const *argv[])
 {
-    Student obj;
-    obj.GetIdName();
-    obj.SetIdName(3, "sidhu");
-    obj.GetIdName();
+    Student student1 = Student(1, "siddhu"); // class object creation.
+    student1.GetIdName();
 
+    Student student2 = Student(); // no parameters so default values will be consider.
+    student2.GetIdName();
     return 0;
 }

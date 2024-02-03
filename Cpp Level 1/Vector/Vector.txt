@@ -1,0 +1,49 @@
+<vector> is a powerful and versatile container in C++'s Standard Template Library (STL)
+that provides dynamic arrays. It is similar to arrays but with additional functionalities
+and dynamic resizing capabilities.
+
+Here's an overview of <vector> and its key features:
+
+1. Dynamic Size
+    Unlike fixed-size arrays, vectors can change their size dynamically during runtime.
+    You can add or remove elements using methods like push_back, pop_back, emplace_back, insert, and erase.
+2. Memory Management
+    Vectors manage memory automatically, handling allocation and deallocation seamlessly.
+    They resize themselves as needed, sparing you from manually managing memory.
+3. Random Access
+    Supports efficient random access to elements using indices (like arrays).
+    Accessing elements by index has a time complexity of O(1).
+4. Iterators
+    Provides iterators for traversal. Iterators can be used to navigate through the elements stored
+    in a vector.
+5. Various Operations
+    Offers various operations like sorting (sort), reversing (reverse), searching (find),
+    and more, utilizing algorithms from the STL.
+6. Template Class
+    <vector> is a template class, allowing it to store elements of any data type.
+
+
+##############################################################################################################
+1. Adding Elements:
+    push_back: Adds an element to the end of the vector.
+    emplace_back: Constructs an element in place at the end of the vector 
+        (more efficient than push_back for certain cases).
+    insert: Inserts elements at a specified position in the vector.
+
+2. Removing Elements:
+    pop_back: Removes the last element from the vector.
+    erase: Removes elements from a specified position or range in the vector.
+
+3. Accessing Elements:
+    operator[]: Accesses elements using index. (vector[index])
+    at: Accesses elements with bounds checking.
+    front: Accesses the first element of the vector.
+    back: Accesses the last element of the vector.
+
+4. Iterating through Vector:
+    Using traditional loops (for, while) or range-based for loops.
+
+5. Size and Capacity:
+    size(): Returns the number of elements in the vector.
+    capacity(): Returns the size of the storage space currently allocated for the vector, 
+        expressed in terms of elements.
