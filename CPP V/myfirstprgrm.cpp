@@ -1,3 +1,12 @@
+/*
+git status
+git add .
+git commit -m " "
+git push origin main
+
+git pull origin main
+*/
+
 #include <iostream>
 #include <vector>
 using namespace std;
