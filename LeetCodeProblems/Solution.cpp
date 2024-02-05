@@ -435,12 +435,38 @@ std::vector<std::string> solution::summary_ranges_228(std::vector<int>& nums)
 {
 	std::vector<std::string> result;
 
+	// Check if the input vector is empty
+	if (nums.empty())
+	{
+		return result;
+	}
+
 	auto it = nums.begin();
 
-	while (it != nums.end() && std::next(it) != nums.end())
+	while (it != nums.end())
 	{
-		int temp = *it;
-		
+		int start = *it;
+
+		// Find the end of the current range
+		while (std::next(it) != nums.end() && *std::next(it) == *it + 1)
+		{
+			++it;
+		}
+
+		int end = *it;
+
+		// Construct the range string
+		if (start == end)
+		{
+			result.push_back(std::to_string(start));
+		}
+		else
+		{
+			result.push_back(std::to_string(start) + "->" + std::to_string(end));
+		}
+
+		// Move to the next element
+		++it;
 	}
 
 	return result;
