@@ -430,6 +430,22 @@ bool solution::contains_nearby_duplicate_219(std::vector<int>& nums, int k)
 	return false; // No duplicates found within the specified range
 }
 
+//228
+std::vector<std::string> solution::summary_ranges_228(std::vector<int>& nums)
+{
+	std::vector<std::string> result;
+
+	auto it = nums.begin();
+
+	while (it != nums.end() && std::next(it) != nums.end())
+	{
+		int temp = *it;
+		
+	}
+
+	return result;
+}
+
 //242
 bool solution::is_anagram_242(std::string s, std::string t)
 {

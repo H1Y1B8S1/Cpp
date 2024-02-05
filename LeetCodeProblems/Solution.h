@@ -50,6 +50,9 @@ public:
 	//219
 	static bool contains_nearby_duplicate_219(std::vector<int>& nums, int k);
 
+	//228
+	static std::vector<std::string> summary_ranges_228(std::vector<int>& nums);
+
 	//242 
 	static bool is_anagram_242(std::string s, std::string t);
 
