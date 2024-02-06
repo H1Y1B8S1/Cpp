@@ -26,7 +26,6 @@ ipch/
 *.pdb
 *.user
 *.vsidx
-*.vcxproj
 *.filters
 *.opendb
 *.db-shm
