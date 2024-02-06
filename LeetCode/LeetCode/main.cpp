@@ -54,5 +54,6 @@ int main(int argc, char* argv[])
 		std::cout << s << ",";
 	}
 	std::cout << "]";
+
 	return 0;
 }
