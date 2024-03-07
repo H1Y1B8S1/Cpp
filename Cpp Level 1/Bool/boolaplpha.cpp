@@ -17,6 +17,7 @@ int main()
 
     std::cout<<std::boolalpha; // This line make output look like true/false instead 1 and 0 for bool.
 
-    std::cout << flag;
+    std::cout << flag<<"\n";
+    std::cout<<TrueFlase(inPut)<<"\n"; // Or use this direactlly
     return 0;
 }
