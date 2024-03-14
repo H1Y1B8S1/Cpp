@@ -1,11 +1,24 @@
 #include <iostream>
 
-
-class Employee
+class AbstractEmployee
 {
-public:
+	virtual void AskForPromotion() = 0;
+};
+
+class Employee : AbstractEmployee
+{
+private:
 	std::string Name, Company;
 	int Age;
+
+public:
+	void setName(std::string name) { Name = name; }
+	void setCompany(std::string company) { Company = company; }
+	void setAge(int age) { Age = age; }
+
+	std::string getName() { return Name; }
+	std::string getCompany() { return Company; }
+	int getAge() { return Age; }
 
 	Employee(std::string name, std::string company, int age)
 	{
@@ -20,6 +33,14 @@ public:
 		std::cout << "Company -" << Company << "\n";
 		std::cout << "Age -" << Age << "\n";
 	}
+
+	void AskForPromotion() override
+	{
+		if (Age > 30)
+			std::cout << Name << " got promoted!\n";
+		else
+			std::cout << "LOL\n";
+	};
 };
 
 
@@ -27,10 +48,17 @@ int main()
 {
 	Employee employee1("Sid", "IQ", 24);
 	employee1.IntroduceYourself();
+	employee1.AskForPromotion();
+
+
+	Employee employee2("Siddharth", "IQ", 34);
+	employee2.IntroduceYourself();
+	employee2.AskForPromotion();
+
 }
 
 
-////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////
 //#include <iostream>
 //#include <string> // Include string header for std::string
 //
