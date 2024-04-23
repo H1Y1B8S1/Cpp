@@ -1,4 +1,4 @@
-1) First make sure your current directory is your .ssh folder.
+(1) First make sure your current directory is your .ssh folder.
 Syntax for generating unique ssh key for ann account is:
 
 		$ ssh-keygen -t rsa -C "h1y1b8s1@gmail.com" -f "github-H1Y1B8S1"
