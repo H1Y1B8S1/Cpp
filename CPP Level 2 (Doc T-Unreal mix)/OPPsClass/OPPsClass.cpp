@@ -44,6 +44,14 @@ public:
 };
 
 
+class Developer : Employee{
+
+public: 
+	std::string favProgrammingLanguage = "C++";
+
+	Developer(std::string name, std::string company, int age, std::string favLang){}
+};
+
 int main()
 {
 	Employee employee1("Sid", "IQ", 24);
@@ -54,6 +62,8 @@ int main()
 	Employee employee2("Siddharth", "IQ", 34);
 	employee2.IntroduceYourself();
 	employee2.AskForPromotion();
+
+	
 
 }
 
