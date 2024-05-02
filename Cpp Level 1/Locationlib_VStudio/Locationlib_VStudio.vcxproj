@@ -127,7 +127,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Locationlib.cpp" />
     <ClCompile Include="Locationlib_VStudio.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Locationlib.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
