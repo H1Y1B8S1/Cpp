@@ -15,24 +15,24 @@ private:
 class AppleTree
 {
 public:
-	// Method to create an apple with a specified sweetness level.
-	Apple createFruit(int sweetness)
-	{
-		Apple appleObj(sweetness); // Object creation using private constructor
-		return appleObj;
-	}
+  // Constructor to create an AppleTree with a specified sweetness level for the apple
+  AppleTree(int sweetness){
+    Apple apple(sweetness); // Creating an apple using private constructor of Apple Class.
+  }
 
-	void shakeTree()
-	{
-		std::cout << "Shaking the tree...\n";
-		std::cout << "Apples are falling....\n";
-	}
+  // Method to simulate shaking the apple tree and making apples fall
+  void shakeTree(){
+    std::cout << "Shaking the tree..." << std::endl;
+    std::cout << "Apples are falling!" << std::endl;
+  }
 };
 
-int main()
-{
-	AppleTree tree;
-	tree.createFruit(3);
-	tree.shakeTree();
-	return 0;
+int main() {
+  // Create an AppleTree with a specified sweetness level (8)
+  AppleTree tree(8);
+
+  // Shake the tree to make apples fall
+  tree.shakeTree();
+  
+  return 0;
 }
