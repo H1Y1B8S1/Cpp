@@ -1,5 +1,4 @@
 #include <iostream>
-#include <algorithm> // Include <algorithm> for std::copy
 
 class managed_array
 {
@@ -14,14 +13,15 @@ public:
         std::cout << "Array size:" << size << "\n";
     }
 
-    ~managed_array()
+    ~managed_array() // destructor 
     {
         delete[] NewArray;
         std::cout << "array deleted.\n";
     }
 };
 
-int main(){
+int main()
+{
     managed_array obj(10);
-
+    managed_array(13);
 }
