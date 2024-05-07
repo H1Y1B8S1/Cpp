@@ -8,7 +8,7 @@ public:
 	std::array<char, 100> read_next() const;
 
 	// Write the next 100 bytes in the connection
-	void write_next(const std::array<char, 100>& blob);
+	void write_next(const std::array<char, 100> &blob);
 
 private:
 	// In this simplified class, we do not send data over the network
@@ -22,7 +22,8 @@ class udp_connection
 {
 private:
 	std::array<char, 100> data;
+
 public:
 	std::array<char, 100> read_next() const;
-	void write_next(const std::array<char, 100>& blob);
+	void write_next(const std::array<char, 100> &blob);
 };
