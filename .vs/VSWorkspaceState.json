@@ -1,12 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Cpp Level 1",
-    "\\Cpp Level 1\\Templates",
-    "\\Cpp Level 1\\Templates\\template02_VStudio",
-    "\\Cpp Level 1\\Templates\\template02_VStudio\\template02",
-    "\\Cpp Level 1\\Templates\\template02_VStudio\\template02\\template02"
+    "\\Cpp Programs",
+    "\\Cpp Programs\\Array"
   ],
-  "SelectedNode": "\\Cpp Level 1\\Templates\\template02_VStudio\\template02\\template02",
+  "SelectedNode": "\\Cpp Programs\\RoadMap.txt",
   "PreviewInSolutionExplorer": false
 }
