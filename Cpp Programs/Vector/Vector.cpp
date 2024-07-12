@@ -1,11 +1,18 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <algorithm> // for sort method
 
 int main()
 {
 
-    std::vector<int> numbers = {10, 20, 30, 40, 50,};
+    std::vector<int> numbers = {
+        10,
+        20,
+        30,
+        40,
+        50,
+    };
 
     // Adding elements to the end of the vector
     numbers.push_back(60);
@@ -32,7 +39,17 @@ int main()
     std::cout << "\n";
 
     // Displaying vector elements
-    std::cout << "Vector elements: ";
+    std::cout << "Array elements: ";
+    for (int num : numbers)
+    {
+        std::cout << num << " ";
+    }
+    std::cout << std::endl;
+
+    // _____________Sorting an array___________________
+    sort(numbers.begin(), numbers.end());
+
+    std::cout << "Sorted Array elements: ";
     for (int num : numbers)
     {
         std::cout << num << " ";
