@@ -1,25 +1,25 @@
 #include <iostream>
+#include <string>
 
-void callbyvalue(int  value){
-    value +=5;
-    std::cout<<value<<"\n";
+void removeSubstring(std::string &s, const std::string &sub)
+{
+    size_t pos;
+    while ((pos = s.find(sub)) != std::string::npos)
+    {
+        s.erase(pos, sub.length());
+    }
 }
-
-void callbyreference(int& value){
-    value+=5;
-    std::cout<<value<<"\n";
-
-}
-
 
 int main()
 {
-    int value = 5;
-    callbyvalue(value);
-    std::cout<<value<<"\n";
-    callbyreference(value);
-    std::cout<<value<<"\n";
+    std::string s = "cdbcbbaaabab";
+    std::string sub = "ba";
 
+    std::cout << "Original string: " << s << std::endl;
+
+    removeSubstring(s, sub);
+
+    std::cout << "String after removing substring \"" << sub << "\": " << s << std::endl;
 
     return 0;
 }
