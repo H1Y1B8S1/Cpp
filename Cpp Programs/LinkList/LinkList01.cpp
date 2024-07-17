@@ -32,6 +32,9 @@ void insertAfter(Node *prev_node, int new_data)
 }
 
 // Function to insert a node at the end
+/*
+        Pointer to a Pointer (ListNode **head)
+*/
 void insertAtEnd(Node **head_ref, int new_data)
 {
     Node *new_node = new Node();
