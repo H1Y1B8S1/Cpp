@@ -74,7 +74,7 @@ int main(int argc, char const *argv[])
     };
 
     // Try adding a new value with key 4
-    addValueToMap(4, "Value4"); 
+    addValueToMap(4, "Value4");
 
     // Try adding a value with an existing key (key = 2)
     addValueToMap(2, "Value2Duplicate");

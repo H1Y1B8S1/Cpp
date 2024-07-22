@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <cmath>
 using namespace std;
 
 class Solution
@@ -26,7 +27,9 @@ int main(void)
 
     std::string s = "a1";
     std::cout << static_cast<int>(s[0]) % 2 << " ";
-    std::cout << static_cast<int>('1');
+    std::cout << static_cast<int>('1') << " \n";
+
+    std::cout << abs(1 - 4) << " \n";
 
     return 0;
 }
