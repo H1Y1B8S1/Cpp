@@ -2,6 +2,7 @@
 #include <vector>
 #include <string>
 #include <cmath>
+#include <map>
 using namespace std;
 
 class Solution
@@ -22,14 +23,22 @@ public:
 
 int main(void)
 {
-    Solution sol;
-    // vector<int> op = sol.selfDividingNumbers(1, 22);
+    // Initialize the vector with given values
+    std::vector<int> vec = {-1, 1, -6, 4, 5, -6, 1, 4, 1};
 
-    std::string s = "a1";
-    std::cout << static_cast<int>(s[0]) % 2 << " ";
-    std::cout << static_cast<int>('1') << " \n";
+    // Create an ordered map to count occurrences of each integer
+    std::map<int, int> countMap;
 
-    std::cout << abs(1 - 4) << " \n";
+    // Iterate over the vector and count the occurrences
+    for (int num : vec) {
+        countMap[num]++;
+    }
+
+    // Display the count of each integer
+    std::cout << "Counts of each integer:" << std::endl;
+    for (const auto& pair : countMap) {
+        std::cout << pair.first << ": " << pair.second << std::endl;
+    }
 
     return 0;
 }
