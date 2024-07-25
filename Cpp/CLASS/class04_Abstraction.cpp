@@ -17,7 +17,7 @@ public:
 class Rectangle : Shape
 {
 public:
-    void draw()       
+    void draw()
     {
         cout << "drawing rectangle..." << endl;
     }

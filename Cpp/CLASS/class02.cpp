@@ -4,7 +4,7 @@ This pointer:
     It can be used to refer current class instance variable.
     It can be used to declare indexers.
 
-    so we can use same variable names for class field as well as Constructor paramerts.
+    so we can use same variable names for class field as well as Constructor parament.
 */
 
 #include <iostream>
