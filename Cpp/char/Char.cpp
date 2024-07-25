@@ -11,7 +11,7 @@ int main(){
     std::cout<<"first char of string: "<<first<<"\n";
     std::cout<<"second char of string: "<<second<<"\n";
     std::cout<<"char ASCII value: "<<static_cast<int>(first)<<"\n";
-    std::cout<<"second char value to digit conversion"<<second - '0'<<"\n";
+    std::cout<<"second char value to digit conversion"<<second - '0'<<"\n"; // char(digit) to int(digit)
 
     return 0;
 }
