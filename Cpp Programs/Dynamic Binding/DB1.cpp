@@ -55,7 +55,7 @@ int main()
     return 0;
 }
 
-/* Here’s what happens:
+/* Here, what's happening:
 > ptr is a pointer to Base, but it points to an object of Derived.
 > When ptr->display() is called, the call is resolved at runtime.
 > The runtime system determines that ptr actually points to a Derived object

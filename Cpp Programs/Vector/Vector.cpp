@@ -22,6 +22,11 @@ int main()
     std::cout << "First element: " << numbers[0] << std::endl;
     std::cout << "Last element: " << numbers.back() << std::endl;
 
+    // largest element in vector
+    auto it = std::max_element(numbers.begin(), numbers.end());
+    int largestNum = *it;
+    std::cout << "largest Number: " << largestNum << "\n";
+
     // Removing elements from the end and a specific position
     numbers.pop_back();
     numbers.erase(numbers.begin() + 2);
@@ -71,15 +76,6 @@ int main()
     {
         std::cout << value << " ";
     }
-
-    //=--------------------------------------------------------------------------------------
-    // finding and checking value in vector.
-    // if (std::find(mappedCharacters.begin(), mappedCharacters.end(), t[i]) == mappedCharacters.end())
-    // {
-    //     // t[i] is not used for mapping, so we can map s[i] to t[i]
-    //     mappedCharacters.push_back(t[i]);
-    //     mapping[s[i]] = t[i];
-    // }
 
     return 0;
 }
