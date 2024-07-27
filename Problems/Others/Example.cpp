@@ -3,6 +3,7 @@
 #include <string>
 #include <cmath>
 #include <map>
+#include<bitset>
 using namespace std;
 
 class Solution
@@ -21,14 +22,12 @@ public:
     }
 };
 
-int main(void)
-{
-    std::string s = "";
 
-    std::cout << ']' - '[' << "\n";
-    std::cout << ')' - '0' << "\n";
-    std::cout << '}' - '0' << "\n";
-    std::cout << s.size()%2 << "\n";
+int main() {
+    int number = 42; // Example integer
+    std::bitset<64> binary(number); // Convert integer to binary with 32 bits
+
+    std::cout << "Binary representation of " << number << " is " << binary << std::endl;
 
     return 0;
 }
