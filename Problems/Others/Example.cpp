@@ -23,9 +23,12 @@ public:
 
 int main(void)
 {
+    std::string s = "";
+
     std::cout << ']' - '[' << "\n";
     std::cout << ')' - '0' << "\n";
     std::cout << '}' - '0' << "\n";
+    std::cout << s.size()%2 << "\n";
 
     return 0;
 }

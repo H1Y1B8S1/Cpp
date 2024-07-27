@@ -1,3 +1,11 @@
+/*
+Push: Add an element to the top of the stack.
+Pop: Remove the top element from the stack.
+Top/Peek: Return the top element without removing it.
+isEmpty: Check if the stack is empty.
+Size: Return the number of elements in the stack.
+*/
+
 #include <iostream>
 #include <stack>
 
@@ -14,6 +22,7 @@ int main()
     std::cout << "Top element: " << myStack.top() << "\n";
 
     // Pop the top element
+    myStack.pop();
     myStack.pop();
 
     // Print the top element
