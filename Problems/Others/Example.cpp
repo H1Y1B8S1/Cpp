@@ -23,22 +23,9 @@ public:
 
 int main(void)
 {
-    // Initialize the vector with given values
-    std::vector<int> vec = {-1, 1, -6, 4, 5, -6, 1, 4, 1};
-
-    // Create an ordered map to count occurrences of each integer
-    std::map<int, int> countMap;
-
-    // Iterate over the vector and count the occurrences
-    for (int num : vec) {
-        countMap[num]++;
-    }
-
-    // Display the count of each integer
-    std::cout << "Counts of each integer:" << std::endl;
-    for (const auto& pair : countMap) {
-        std::cout << pair.first << ": " << pair.second << std::endl;
-    }
+    std::cout << ']' - '[' << "\n";
+    std::cout << ')' - '0' << "\n";
+    std::cout << '}' - '0' << "\n";
 
     return 0;
 }
