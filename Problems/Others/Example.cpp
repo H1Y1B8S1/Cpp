@@ -3,31 +3,43 @@
 #include <string>
 #include <cmath>
 #include <map>
-#include<bitset>
+#include <bitset>
 using namespace std;
 
 class Solution
 {
 public:
-    bool squareIsWhite(string coordinates)
+    int numTeams(vector<int> &rating)
     {
-        if (static_cast<int>(coordinates[0]) % 2 == 0 &&
-            (coordinates[1] - '0') % 2 == 0)
-            return true;
-        else if (static_cast<int>(coordinates[0]) % 2 != 0 &&
-                 (coordinates[1] - '0') % 2 != 0)
-            return true;
-        else
-            return false;
+        int c = 0;
+        int n = rating.size();
+        for (int i = 0; i < n - 2; i++)
+        {
+            for (int j = i+1; j < n - 1; j++)
+            {
+                for (int k = i+2; k < n; k++)
+                {
+                    if ((rating[i] < rating[j] && rating[j] < rating[k]) ||
+                        (rating[i] > rating[j] && rating[j] > rating[k]))
+                    {
+                        c++;
+                        std::cout << rating[i] << rating[j] << rating[k] << " ";
+                    }
+                }
+            }
+        }
+        return c;
     }
 };
 
+int main()
+{
+    std::vector<int> v = {3,6,7,5,1};
 
-int main() {
-    int number = 42; // Example integer
-    std::bitset<64> binary(number); // Convert integer to binary with 32 bits
+    Solution sol;
 
-    std::cout << "Binary representation of " << number << " is " << binary << std::endl;
+    int c = sol.numTeams(v);
 
+    std::cout << c;
     return 0;
 }

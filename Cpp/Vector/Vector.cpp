@@ -76,6 +76,17 @@ int main()
     {
         std::cout << value << " ";
     }
+    std::cout << std::endl;
 
+    //________________ concatenation of vectors _________________
+
+    std::vector<int> ans(numbers);                         // Initialize ans with a copy of numbers
+    ans.insert(ans.end(), numbers.begin(), numbers.end()); // Insert nums at the end of ans
+
+    for (int i : ans)
+    {
+        std::cout << i << ",";
+    }
+    std::cout << std::endl;
     return 0;
 }
