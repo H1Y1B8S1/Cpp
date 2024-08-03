@@ -16,6 +16,9 @@ void demoMap()
     orderedMap.insert({4, "Four"});
     orderedMap[9]; // with value null i guess;
 
+    // size 
+    std::cout<<"size: "<<orderedMap.size()<<std::endl;
+
     // Access elements
     std::cout << "Element with key 2: " << orderedMap[2] << std::endl;
 
@@ -83,7 +86,7 @@ void demoUnorderedMap()
     // Iterate over elements
     std::cout << "Elements in the unordered map:" << std::endl;
     for (const auto &pair : unorderedMap)
-    {
+    {   
         std::cout << pair.first << ": " << pair.second << std::endl;
     }
 

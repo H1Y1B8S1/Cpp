@@ -22,7 +22,7 @@ int main()
     std::cout << "First element: " << numbers[0] << std::endl;
     std::cout << "Last element: " << numbers.back() << std::endl;
 
-    // largest element in vector
+    // __________ largest element in vector___________________
     auto it = std::max_element(numbers.begin(), numbers.end());
     int largestNum = *it;
     std::cout << "largest Number: " << largestNum << "\n";
@@ -53,6 +53,7 @@ int main()
 
     // _____________Sorting an array___________________
     sort(numbers.begin(), numbers.end());
+    //sort(numbers.begin(),numbers.end(),greater<int>()) //reveres order.
 
     std::cout << "Sorted Array elements: ";
     for (int num : numbers)
