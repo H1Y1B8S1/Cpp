@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include <algorithm> // sort, find, distance
+#include <algorithm> //sort, find, distance, max_element, min_element, partial_sort, stable_sort, reverse
 
 /*
 (1) Vector Initialization
@@ -104,6 +104,10 @@ int main(void)
     // #[9] Size and Capacity
     std::cout << "Size: " << nums.size() << std::endl;
     std::cout << "Capacity: " << nums.capacity() << std::endl;
+    nums.reserve(20);                                                              // Requests a change in the capacity of the vector to at least 20
+    std::cout << "Is empty: " << (nums.empty() ? "Yes" : "No") << std::endl;       // Checks if the vector is empty
+    nums.shrink_to_fit();                                                          // Reduces the capacity of the vector to fit its size
+    nums.resize(10, 0);                                                            // Resizes the vector to 10 elements, filling new elements with 0
     /*_______________________________________________________________________________________________________*/
 
     return 0;
