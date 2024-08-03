@@ -5,14 +5,8 @@
 
 int main()
 {
-
-    std::vector<int> numbers = {
-        10,
-        20,
-        30,
-        40,
-        50,
-    };
+    //(1) Vector Initialization 
+    std::vector<int> numbers = {10, 20, 30, 40, 50};
 
     // Adding elements to the end of the vector
     numbers.push_back(60);
@@ -26,6 +20,13 @@ int main()
     auto it = std::max_element(numbers.begin(), numbers.end());
     int largestNum = *it;
     std::cout << "largest Number: " << largestNum << "\n";
+
+    //___________ find element in vector _____________________
+    auto it2 = std::find(numbers.begin(), numbers.end(), 50);
+    if (it2 != numbers.end())
+        std::cout << "found at position: " << std::distance(numbers.begin(), it2) << std::endl;
+    else
+        std::cout << "not found in the vector." << std::endl;
 
     // Removing elements from the end and a specific position
     numbers.pop_back();
