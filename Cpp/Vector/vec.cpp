@@ -6,6 +6,8 @@
 /*
 (1) Vector Initialization
 (2) Adding elements
+(3) Removing elements
+(4) Accessing elements
 */
 
 int main(void)
@@ -28,10 +30,23 @@ int main(void)
     nums.insert(nums.begin() + 1, {70, 80, 90});         // Inserts a list of elements at a specified position
     nums2.insert(nums2.end(), nums.begin(), nums.end()); // Inserts a range of elements at the end of the vector
 
+    // #[3] Removing elements
+    nums.pop_back();
+    nums.erase(nums.begin());                       // Removes the first element of the vector
+    nums.erase(nums.begin() + 2);                   // Removes the element from the specified position
+    nums.erase(nums.begin() + 1, nums.begin() + 3); // Removes a range of elements
+    nums3.clear();                                  // Removes all elements from the vector
+    nums3.resize(5);                                // Resizes the vector to contain 5 elements (truncating or adding elements)
+
     for (int num : nums)
     {
         std::cout << num << ",";
     }
     std::cout << std::endl;
+    
+    // #[4] Accessing elements
+    std::cout << "First element: " << nums[0] << std::endl;
+    std::cout << "Last element: " << nums.back() << std::endl;
+
     return 0;
 }
