@@ -53,7 +53,7 @@ int main()
 
     // _____________Sorting an array___________________
     sort(numbers.begin(), numbers.end());
-    //sort(numbers.begin(),numbers.end(),greater<int>()) //reveres order.
+    // sort(numbers.begin(),numbers.end(),greater<int>()) //reveres order.
 
     std::cout << "Sorted Array elements: ";
     for (int num : numbers)
@@ -79,12 +79,13 @@ int main()
     }
     std::cout << std::endl;
 
-    //________________ concatenation of vectors _________________
+    //________________ COPY and concatenation of vectors _________________
 
-    std::vector<int> ans(numbers);                         // Initialize ans with a copy of numbers
-    ans.insert(ans.end(), numbers.begin(), numbers.end()); // Insert nums at the end of ans
+    // std::vector<int> numbersNew(numbers);                       // Initialize numbersNew with a copy of numbers
+    std::vector<int> numbersNew(numbers.begin(), numbers.end());         // Initialize numbersNew with a copy of numbers
+    numbersNew.insert(numbersNew.end(), numbers.begin(), numbers.end()); // Insert nums at the end of numbersNew
 
-    for (int i : ans)
+    for (int i : numbersNew)
     {
         std::cout << i << ",";
     }
