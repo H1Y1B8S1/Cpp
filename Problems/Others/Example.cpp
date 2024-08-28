@@ -13,7 +13,16 @@ using namespace std;
 
 int main()
 {
-    int n = 4;
-    std::cout << ((n & (n - 1)));
+    std::string c = "abc";
+    std::string d = "abcd";
+    int r = 0;
+
+    auto it = d.begin();w
+    while (it != d.end())
+    {
+        std::cout << *it;
+        it++;
+    }
+
     return 0;
 }
