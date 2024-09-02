@@ -6,23 +6,12 @@
 #include <bitset>
 using namespace std;
 
-// class Solution
-// {
-// public:
-// };
-
 int main()
 {
-    std::string c = "abc";
-    std::string d = "abcd";
-    int r = 0;
+    std::string str = "2020";
+    int number = std::stoi(str); // Convert string to integer
 
-    auto it = d.begin();w
-    while (it != d.end())
-    {
-        std::cout << *it;
-        it++;
-    }
+    std::cout << "The number is: " << number << std::endl;
 
     return 0;
 }

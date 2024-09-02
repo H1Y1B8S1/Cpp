@@ -30,7 +30,7 @@ int main()
 {
     // #[01] Ordered Set (std::set) Initialization
     std::set<int> set1; // Default constructor
-    std::set<int> set2 = {1, 3, 5, 7, 9}; // Initializer list
+    std::set<int> set2 = {11, 3, 15, 7, 9}; // Initializer list
     std::set<int> set3(set2); // Copy constructor
     std::set<int> set4(set2.begin(), set2.end()); // Range constructor
 
