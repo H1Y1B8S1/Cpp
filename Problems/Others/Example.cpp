@@ -12,6 +12,7 @@ int main()
     int number = std::stoi(str); // Convert string to integer
 
     std::cout << "The number is: " << number << std::endl;
+    std::cout<<"Jay shree Ram!";
 
     return 0;
 }
