@@ -1,7 +1,11 @@
+
+#include <iostream>
 #include <raylib.h>
 
 int main()
 {
+
+    std::cout << "Hello raylib\n";
 
     // Window Dimensions
     int width{ 1920 }, height{ 1080 };

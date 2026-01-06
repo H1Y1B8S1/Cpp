@@ -1,4 +1,5 @@
-﻿  LINK : C:\SINH\C++\Raylib Projects\AxeGame\x64\Debug\AxeGame.exe not found or not built by the last incremental link; performing full link
+﻿  AxeGame.cpp
+C:\SINH\C++\Raylib Projects\AxeGame\AxeGame.cpp(44,38): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
   AxeGame.vcxproj -> C:\SINH\C++\Raylib Projects\AxeGame\x64\Debug\AxeGame.exe
   'pwsh.exe' is not recognized as an internal or external command,
   operable program or batch file.
