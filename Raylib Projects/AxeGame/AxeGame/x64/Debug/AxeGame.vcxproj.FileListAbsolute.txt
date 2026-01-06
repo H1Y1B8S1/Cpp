@@ -1,3 +1,0 @@
-C:\SINH\C++\Raylib Projects\AxeGame\x64\Debug\raylib.dll
-C:\SINH\C++\Raylib Projects\AxeGame\x64\Debug\glfw3.dll
-C:\SINH\C++\Raylib Projects\AxeGame\AxeGame\x64\Debug\AxeGame.vcxproj.Up2Date
