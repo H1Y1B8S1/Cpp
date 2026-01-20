@@ -12,7 +12,7 @@ int main()
     int circleX{ width / 2 }, circleY{ height / 2 };
     int circleRadius{ 25 };
 
-    // Circle edges
+    // Circle edges - cheack collision box arround it.
     int circleLeft{ circleX - circleRadius };
     int circleRight{ circleX + circleRadius };
     int circleUp{ circleY - circleRadius };
@@ -21,14 +21,16 @@ int main()
     // Axe Coordinates
     int axeLength{ 50 };
     int axeX{ width / 2 - axeLength / 2 }, axeY{ 0 };
-    // Axe edges
+    // Axe four edges
     int axeLeft{ axeX };
     int axeRight{ axeX + axeLength };
     int axeUp{ axeY };
     int axeDown{ axeY + axeLength };
 
+    int movementDireaction{ 4 };
+    int autoDirection{ 15 };
 
-    int direction{ 2 };
+    bool collisionWithAxe{ false };
 
     SetTargetFPS(120);
     while (!WindowShouldClose())
@@ -36,25 +38,31 @@ int main()
         BeginDrawing();
         ClearBackground(WHITE);
 
-        // Game Logic Begins 
+         collisionWithAxe = CheckCollisionCircleRec(Vector2(circleX, circleY), circleRadius,Rectangle(axeX, axeY, axeLength, axeLength));
 
-        DrawCircle(circleX, circleY, circleRadius, RED);
-        DrawRectangle(axeX, axeY, axeLength, axeLength, BLUE);
+        if (collisionWithAxe)
+            DrawText("Game Over!!", (width / 2) - 200, height / 2, 60, RED);
 
-        if ((axeY > height) || (axeY < 0))
-            direction = -direction;
+        else 
+        {   // Game Logic Begins 
 
-        axeY += direction;
+            DrawCircle(circleX, circleY, circleRadius, RED);
+            DrawRectangle(axeX, axeY, axeLength, axeLength, BLUE);
 
+            if ((axeY > height) || (axeY < 0))
+                autoDirection = -autoDirection;
 
-        if (IsKeyDown(KEY_D) && circleX <= width - circleRadius)
-            circleX += direction;
-        if (IsKeyDown(KEY_A) && circleX >= circleRadius)
-            circleX -= direction;
-        if (IsKeyDown(KEY_W) && circleY >= circleRadius)
-            circleY -= direction;
-        if (IsKeyDown(KEY_S) && circleY <= height - circleRadius)
-            circleY += direction;
+            axeY += autoDirection;
+
+            if (IsKeyDown(KEY_D) && circleX <= width - circleRadius)
+                circleX += movementDireaction;
+            if (IsKeyDown(KEY_A) && circleX >= circleRadius)
+                circleX -= movementDireaction;
+            if (IsKeyDown(KEY_W) && circleY >= circleRadius)
+                circleY -= movementDireaction;
+            if (IsKeyDown(KEY_S) && circleY <= height - circleRadius)
+                circleY += movementDireaction;
+        }
 
 
 
